@@ -18,7 +18,6 @@ function fiboEvenSum(n) {
         if((previousNumber + currentNumber) % 2 == 0){
             result += (previousNumber + currentNumber);
         }
-        
     }
 
     return result;
