@@ -21,8 +21,6 @@ function fiboEvenSum(n) {
         
     }
 
-    console.log(result);
-
     return result;
 }
   
