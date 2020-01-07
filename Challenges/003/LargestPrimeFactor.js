@@ -30,15 +30,45 @@ function largestPrimeFactor(number) {
             }
         }
     }
-    
+
     return largestPrime;
 }
 
 
+//console.log(largestPrimeFactor(2));
+//console.log(largestPrimeFactor(3));
+//console.log(largestPrimeFactor(5));
+//console.log(largestPrimeFactor(7));
+//console.log(largestPrimeFactor(13195));
+//console.log(largestPrimeFactor(600851475143));
 
-// largestPrimeFactor(2);
-// largestPrimeFactor(3);
-// largestPrimeFactor(5);
-// largestPrimeFactor(7);
-//largestPrimeFactor(13195);
-largestPrimeFactor(600851475143);
+
+
+
+function largestPrimeFactor(number) {
+
+    if (number == 2) {
+      return number;
+    }
+  
+    var workingNumber = number;
+  
+    // We now loop through all odd numbers.
+    // sqrt our workingNumber because the prime can't be higher than that.
+    for (var i = 3; i <= Math.sqrt(workingNumber); i = i + 2) { 
+      while (workingNumber % i == 0) {
+          
+        workingNumber = workingNumber / i; 
+      }
+    } 
+  
+    return workingNumber;
+  }
+  
+  
+console.log(largestPrimeFactor(2));
+console.log(largestPrimeFactor(3));
+console.log(largestPrimeFactor(5));
+console.log(largestPrimeFactor(7));
+console.log(largestPrimeFactor(13195));
+console.log(largestPrimeFactor(600851475143));
